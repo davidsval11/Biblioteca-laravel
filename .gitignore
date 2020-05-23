@@ -1,0 +1,5 @@
+/tests
+/storage
+/vendor
+.env
+.env.example
