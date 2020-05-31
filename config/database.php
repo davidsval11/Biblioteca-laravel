@@ -77,7 +77,12 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
         ],
-
+        
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn'=>'mongodb://'.env('DB_USERNAME', 'forge').':'.env('DB_PASSWORD', '').'@uc-sd-shard-00-00-xjddo.mongodb.net:27017,uc-sd-shard-00-01-xjddo.mongodb.net:27017,uc-sd-shard-00-02-xjddo.mongodb.net:27017/test?ssl=true&replicaSet=UC-SD-shard-0&authSource=admin&retryWrites=true&w=majority',
+            'database' => env('DB_DATABASE', 'forge'),
+        ],
     ],
 
     /*
