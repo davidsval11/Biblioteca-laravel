@@ -31,4 +31,5 @@ Route::get('loans', 'LoanController@index');
 Route::get('loans/store', 'LoanController@store');
 Route::get('loans/show', 'LoanController@show');
 Route::get('loans/update', 'LoanController@update');
+Route::get('loans/returnBook', 'LoanController@returnBook');
 Route::get('loans/destroy', 'LoanController@destroy');
