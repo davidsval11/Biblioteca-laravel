@@ -24,6 +24,7 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
+        
         Book::create($request->all());
         return json_encode([
             'status' => 1,
@@ -41,8 +42,9 @@ class BookController extends Controller
         //
     }
 
-    public function update(Request $request, Book $book)
+    public function update(Request $request)
     {
+        $book = Book::find($request->_id);
         $book->update($request->all());
         return json_encode([
             'status' => 1,
@@ -50,12 +52,13 @@ class BookController extends Controller
         ]);
     }
 
-    public function destroy(Book $book)
+    public function destroy(Request $request)
     {
-        $book->destroy();
+        Book::destroy($request->_id);
+        
         return json_encode([
             'status' => 1,
-            'message' => 'Se modifico correctamente el Libro'
+            'message' => 'Se elimino correctamente el Libro'
         ]);
     }
 }

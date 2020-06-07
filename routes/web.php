@@ -15,5 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('books', 'BookController');
-Route::resource('readers', 'ReaderController');
+Route::get('books', 'BookController@index');
+Route::get('books/store', 'BookController@store');
+Route::get('books/show', 'BookController@show');
+Route::get('books/update', 'BookController@update');
+Route::get('books/destroy', 'BookController@destroy');
+
+Route::get('readers', 'ReaderController@index');
+Route::get('readers/store', 'ReaderController@store');
+Route::get('readers/show', 'ReaderController@show');
+Route::get('readers/update', 'ReaderController@update');
+Route::get('readers/destroy', 'ReaderController@destroy');
+
+Route::get('loans', 'LoanController@index');
+Route::get('loans/store', 'LoanController@store');
+Route::get('loans/show', 'LoanController@show');
+Route::get('loans/update', 'LoanController@update');
+Route::get('loans/destroy', 'LoanController@destroy');

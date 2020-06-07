@@ -10,5 +10,5 @@ class Reader extends MongoModel
 
     protected $fillable = ['id', 'name', 'last_name', 'age', 'address', 'email', 'phone', 'cell'];
 
-    protected $primaryKey = 'isbn';
+    protected $primaryKey = '_id';
 }

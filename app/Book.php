@@ -10,5 +10,5 @@ class Book extends MongoModel
 
     protected $fillable = ['isbn', 'title', 'genre', 'author', 'editorial', 'year', 'status', 'copy', 'pages', 'obs'];
 
-    protected $primaryKey = 'isbn';
+    protected $primaryKey = '_id';
 }
